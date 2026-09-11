@@ -20,7 +20,6 @@ const Skills = () => {
       skills: [
         { name: "Node.js & Express", level: 85 },
         { name: "Python", level: 90 },
-        { name: "Laravel & PHP", level: 80 },
         { name: "REST APIs", level: 90 },
         { name: "PostgreSQL", level: 85 },
         { name: "MongoDB", level: 75 },
@@ -30,7 +29,7 @@ const Skills = () => {
       title: "Odoo ERP",
       color: "text-purple-400",
       skills: [
-        { name: "Odoo 16/17", level: 90 },
+        { name: "Odoo 17/18/19", level: 90 },
         { name: "Custom Module Development", level: 90 },
         { name: "ORM & QWeb", level: 85 },
         { name: "Odoo XML/Views", level: 85 },
@@ -86,9 +85,9 @@ const Skills = () => {
                       <span className="text-light font-medium">
                         {skill.name}
                       </span>
-                      <span className="text-light/60 text-sm">
+                      {/* <span className="text-light/60 text-sm">
                         {skill.level}%
-                      </span>
+                      </span> */}
                     </div>
                     <div className="w-full bg-dark/60 rounded-full h-2 overflow-hidden">
                       <div
