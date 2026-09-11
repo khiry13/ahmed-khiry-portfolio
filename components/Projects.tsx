@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const Projects = () => {
   const [filter, setFilter] = useState("all");
+  const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});
 
   const projects = [
     {
@@ -14,32 +15,51 @@ const Projects = () => {
       description:
         "A custom Odoo module for managing students and training courses with attendance and grading systems",
       image: "/projects/student-management.jpg", // Place the image in public/projects
-      tech: ["Python", "Odoo 17", "PostgreSQL", "XML", "QWeb"],
-      github: "https://github.com/yourusername/student-management",
+      tech: [
+        "Python",
+        "Odoo 17",
+        "PostgreSQL",
+        "XML",
+        "JavaScript",
+        "OWL",
+        "REST APIs",
+        "QWeb Reports",
+      ],
+      github: "https://github.com/khiry13/addons_sms",
       demo: "#",
       featured: true,
     },
     {
       id: 2,
-      title: "E-Commerce Dashboard",
+      title: "QuickDine – Multi-Restaurant Table Booking Platform",
       category: "fullstack",
       description:
-        "A complete dashboard for an online store with product, order, and customer management",
-      image: "/projects/ecommerce-dashboard.jpg",
-      tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind"],
-      github: "https://github.com/yourusername/ecommerce-dashboard",
-      demo: "https://your-demo.vercel.app",
+        "A full-stack multi-restaurant table booking platform with dedicated workflows for Customers, Restaurant Owners, and Admins.",
+      image: "/images/quick-dine.png",
+      tech: [
+        "React 19",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT",
+        "Cloudinary",
+      ],
+      github: "https://github.com/khiry13/QuickDine",
+      demo: "https://quick-dine-xi-eight.vercel.app/",
       featured: true,
     },
     {
       id: 3,
-      title: "Visitor Tracking System - Odoo",
+      title: "Samtia B2B E-Commerce Platform - Odoo",
       category: "odoo",
       description:
-        "A system for registering and tracking visitors at organizations with visitor badge printing",
+        "A headless B2B e-commerce platform, enabling product catalog management, customer-specific pricing, RFQs, quotations, orders, product requests, client and portal-user management.",
       image: "/projects/visitor-tracking.jpg",
-      tech: ["Python", "Odoo 16", "PostgreSQL", "Report Generation"],
-      github: "https://github.com/yourusername/visitor-tracking",
+      tech: ["Python", "Odoo 19", "PostgreSQL", "REST APIs", "Next.js", "TypeScript", "WebSockets"],
+      github: "#",
       demo: "#",
       featured: false,
     },
@@ -51,8 +71,8 @@ const Projects = () => {
         "A modern, interactive portfolio website built with Next.js and Tailwind CSS",
       image: "/projects/portfolio.jpg",
       tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-      github: "https://github.com/yourusername/portfolio",
-      demo: "https://your-portfolio.vercel.app",
+      github: "https://github.com/khiry13/ahmed-khiry-portfolio",
+      demo: "#",
       featured: false,
     },
   ];
@@ -110,12 +130,25 @@ const Projects = () => {
             >
               {/* Project Image */}
               <div className="relative h-64 bg-gradient-to-br from-primary/20 to-cyan-500/20 overflow-hidden group">
-                {/* Placeholder if no image */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-6xl font-display font-bold text-white/10">
-                    {project.title.charAt(0)}
+                {!project.image || imageErrors[project.id] ? (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-6xl font-display font-bold text-white/10">
+                      {project.title.charAt(0)}
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    className="absolute inset-0 h-full w-full object-fill"
+                    onError={() =>
+                      setImageErrors((current) => ({
+                        ...current,
+                        [project.id]: true,
+                      }))
+                    }
+                  />
+                )}
                 {project.featured && (
                   <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
                     Featured
