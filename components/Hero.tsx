@@ -49,11 +49,7 @@ const Hero = () => {
                 {" "}
                 React & Next.js
               </span>{" "}
-              |
-              <span className="text-teal-400 font-semibold">
-                {" "}
-                Node.js
-              </span>
+              |<span className="text-teal-400 font-semibold"> Node.js</span>
             </p>
           </div>
 
@@ -120,7 +116,7 @@ const Hero = () => {
             className={`${isVisible ? "animate-fade-in stagger-5" : "opacity-0"}`}
           >
             <a
-              href="../public/files/Ahmed_Khiry.pdf"
+              href="/files/Ahmed_Khiry.pdf"
               download
               className="inline-flex items-center gap-2 text-light/70 hover:text-primary transition-colors duration-300 border-b border-light/30 hover:border-primary pb-1"
             >
@@ -130,8 +126,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      
     </section>
   );
 };

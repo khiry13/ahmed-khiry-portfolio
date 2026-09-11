@@ -201,7 +201,7 @@ const Projects = () => {
         {/* GitHub Link */}
         <div className="text-center mt-12 animate-fade-in stagger-6">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/khiry13"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-light/70 hover:text-primary transition-colors duration-300 text-lg"

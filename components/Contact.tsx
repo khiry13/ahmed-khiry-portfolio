@@ -46,19 +46,19 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com",
+      value: "ahmedkhiry414@gmail.com",
+      href: "mailto:ahmedkhiry414@gmail.com",
     },
     {
       icon: <Phone className="w-6 h-6" />,
       label: "Phone",
-      value: "+20 123 456 7890",
-      href: "tel:+201234567890",
+      value: "+20 101 935 7211",
+      href: "tel:+201019357211",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       label: "Location",
-      value: "Alexandria, Egypt",
+      value: "Mansoura, Egypt",
       href: "#",
     },
   ];
@@ -67,19 +67,19 @@ const Contact = () => {
     {
       icon: <Github className="w-6 h-6" />,
       label: "GitHub",
-      href: "https://github.com/yourusername",
+      href: "https://github.com/khiry13",
       color: "hover:text-gray-400",
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://www.linkedin.com/in/ahmed-khairy-b573aa361/",
       color: "hover:text-blue-500",
     },
     {
       icon: <Twitter className="w-6 h-6" />,
       label: "Twitter",
-      href: "https://twitter.com/yourusername",
+      href: "https://x.com/ahmedkhairy258",
       color: "hover:text-sky-400",
     },
   ];
