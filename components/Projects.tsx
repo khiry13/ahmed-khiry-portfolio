@@ -52,6 +52,30 @@ const Projects = () => {
     },
     {
       id: 3,
+      title: "Portfolio Website",
+      category: "frontend",
+      description:
+        "A modern, interactive portfolio website built with Next.js and Tailwind CSS",
+      image: "/images/portfolio.png",
+      tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      github: "https://github.com/khiry13/ahmed-khiry-portfolio",
+      demo: "#",
+      featured: false,
+    },
+    {
+      id: 4,
+      title: "Samtia B2B E-Commerce Platform - Odoo",
+      category: "odoo",
+      description:
+        "A headless B2B e-commerce platform, enabling product catalog management, customer-specific pricing, RFQs, quotations, orders, product requests, client and portal-user management.",
+      image: "/images/samtia.png",
+      tech: ["Python", "Odoo 19", "PostgreSQL", "REST APIs", "Next.js", "TypeScript", "WebSockets"],
+      github: "",
+      demo: "#",
+      featured: false,
+    },
+    {
+      id: 5,
       title: "Student Management System - Odoo",
       category: "odoo",
       description:
@@ -68,30 +92,6 @@ const Projects = () => {
         "QWeb Reports",
       ],
       github: "https://github.com/khiry13/addons_sms",
-      demo: "#",
-      featured: false,
-    },
-    {
-      id: 4,
-      title: "Samtia B2B E-Commerce Platform - Odoo",
-      category: "odoo",
-      description:
-        "A headless B2B e-commerce platform, enabling product catalog management, customer-specific pricing, RFQs, quotations, orders, product requests, client and portal-user management.",
-      image: "/projects/visitor-tracking.jpg",
-      tech: ["Python", "Odoo 19", "PostgreSQL", "REST APIs", "Next.js", "TypeScript", "WebSockets"],
-      github: "",
-      demo: "#",
-      featured: false,
-    },
-    {
-      id: 5,
-      title: "Portfolio Website",
-      category: "frontend",
-      description:
-        "A modern, interactive portfolio website built with Next.js and Tailwind CSS",
-      image: "/images/portfolio.png",
-      tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-      github: "https://github.com/khiry13/ahmed-khiry-portfolio",
       demo: "#",
       featured: false,
     },
