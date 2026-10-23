@@ -8,10 +8,11 @@ const Skills = () => {
       skills: [
         { name: "React", level: 90 },
         { name: "Next.js", level: 85 },
-        { name: "JavaScript (ES6+)", level: 90 },
-        { name: "TypeScript", level: 75 },
-        { name: "HTML5 & CSS3", level: 95 },
         { name: "Tailwind CSS", level: 85 },
+        { name: "Prisma ORM", level: 85 },
+        { name: "Zustand", level: 85 },
+        { name: "Zod", level: 85 },
+        { name: "responsive design", level: 95 },
       ],
     },
     {
@@ -20,9 +21,11 @@ const Skills = () => {
       skills: [
         { name: "Node.js & Express", level: 85 },
         { name: "Python", level: 90 },
-        { name: "REST APIs", level: 90 },
-        { name: "PostgreSQL", level: 85 },
-        { name: "MongoDB", level: 75 },
+        { name: "REST API design and integration", level: 90 },
+        { name: "WebSockets", level: 85 },
+        { name: "FastAPI", level: 75 },
+        { name: "JWT", level: 75 },
+        { name: "OTP and password-reset flows", level: 75 },
       ],
     },
     {
@@ -31,9 +34,33 @@ const Skills = () => {
       skills: [
         { name: "Odoo 17/18/19", level: 90 },
         { name: "Custom Module Development", level: 90 },
-        { name: "ORM & QWeb", level: 85 },
+        { name: "ORM and computed fields", level: 85 },
         { name: "Odoo XML/Views", level: 85 },
+        { name: "OWL components and dashboards", level: 85 },
+        { name: "QWeb PDF reports", level: 85 },
+        { name: "security groups and record rules", level: 85 },
         { name: "Workflow Customization", level: 80 },
+      ],
+    },
+    {
+      title: "Languages",
+      color: "text-primary",
+      skills: [
+        { name: "Python", level: 90 },
+        { name: "JavaScript", level: 85 },
+        { name: "TypeScript", level: 85 },
+        { name: "PHP", level: 85 },
+        { name: "SQL", level: 85 },
+        { name: "XML", level: 85 },
+      ],
+    },
+    {
+      title: "Databases:",
+      color: "text-primary",
+      skills: [
+        { name: "PostgreSQL", level: 90 },
+        { name: "MySQL", level: 60 },
+        { name: "MongoDB (Mongoose)", level: 95 },
       ],
     },
     {
@@ -64,7 +91,7 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skillCategories.map((category, catIndex) => (
             <div
               key={catIndex}
