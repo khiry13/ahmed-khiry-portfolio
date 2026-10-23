@@ -22,34 +22,24 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      {/* Animated background elements */}
-      <div className="blur-circle w-96 h-96 bg-primary -top-48 -left-48" />
-      <div className="blur-circle w-96 h-96 bg-cyan-500 -bottom-48 -right-48" />
-      <div className="grid-background absolute inset-0" />
-
       <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
         <div className="text-center space-y-8">
           {/* Title Animation */}
           <div
             className={`space-y-4 ${isVisible ? "animate-slide-up" : "opacity-0"}`}
           >
-            <p className="text-primary text-lg font-medium tracking-wider">
-              Hello, I am
+            <p className="text-primary text-sm md:text-base font-semibold tracking-[0.24em] uppercase">
+              Full Stack Developer · Odoo Specialist
             </p>
-            <h1 className="text-6xl md:text-8xl font-display font-bold gradient-text">
+            <h1 className="text-6xl md:text-8xl font-display font-normal text-light">
               Ahmed Khiry
             </h1>
-            <h2 className="text-3xl md:text-5xl font-display text-light/90">
-              Full Stack Developer
+            <h2 className="text-2xl md:text-4xl font-display text-light/80">
+              Building useful digital products
             </h2>
-            <p className="text-xl md:text-2xl text-light/70 max-w-3xl mx-auto">
-              Specializing in{" "}
-              <span className="text-primary font-semibold">Odoo ERP</span> |
-              <span className="text-cyan-400 font-semibold">
-                {" "}
-                React & Next.js
-              </span>{" "}
-              |<span className="text-teal-400 font-semibold"> Node.js</span>
+            <p className="text-lg md:text-xl text-light/65 max-w-3xl mx-auto">
+              Odoo ERP <span className="text-primary">/</span> React & Next.js{" "}
+              <span className="text-primary">/</span> Node.js
             </p>
           </div>
 
@@ -67,14 +57,14 @@ const Hero = () => {
           >
             <button
               onClick={scrollToProjects}
-              className="btn-primary bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-medium flex items-center gap-2 shadow-lg shadow-primary/30"
+              className="btn-primary bg-primary hover:bg-primary/90 text-dark px-8 py-4 rounded-lg font-semibold flex items-center gap-2"
             >
               View Projects
               <ArrowDown size={20} />
             </button>
             <a
               href="#contact"
-              className="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-lg font-medium transition-all duration-300"
+              className="bg-transparent border border-light/25 text-light hover:border-primary hover:text-primary px-8 py-4 rounded-lg font-medium transition-all duration-300"
             >
               Get In Touch
             </a>

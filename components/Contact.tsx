@@ -74,25 +74,22 @@ const Contact = () => {
       icon: <Linkedin className="w-6 h-6" />,
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/ahmed-khairy-b573aa361/",
-      color: "hover:text-blue-500",
+      color: "hover:text-primary",
     },
     {
       icon: <Twitter className="w-6 h-6" />,
       label: "Twitter",
       href: "https://x.com/ahmedkhairy258",
-      color: "hover:text-sky-400",
+      color: "hover:text-primary",
     },
   ];
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
-      <div className="blur-circle w-96 h-96 bg-primary top-0 left-0" />
-      <div className="grid-background absolute inset-0 opacity-30" />
-
+    <section id="contact" className="py-24 relative overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Section Title */}
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-display font-bold gradient-text mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-normal text-light mb-4">
             Get In Touch
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
@@ -104,7 +101,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="animate-slide-up stagger-2">
-            <div className="bg-dark/40 backdrop-blur-sm border border-primary/20 rounded-2xl p-8">
+            <div className="bg-surface border border-white/10 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-light mb-6">
                 Send a Message
               </h3>
@@ -121,7 +118,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full bg-dark/60 border border-primary/20 rounded-lg px-4 py-3 text-light focus:outline-none focus:border-primary transition-colors duration-300"
+                    className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-light placeholder:text-light/35 focus:outline-none focus:border-primary transition-colors duration-300"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -137,7 +134,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full bg-dark/60 border border-primary/20 rounded-lg px-4 py-3 text-light focus:outline-none focus:border-primary transition-colors duration-300"
+                    className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-light placeholder:text-light/35 focus:outline-none focus:border-primary transition-colors duration-300"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -153,7 +150,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full bg-dark/60 border border-primary/20 rounded-lg px-4 py-3 text-light focus:outline-none focus:border-primary transition-colors duration-300"
+                    className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-light placeholder:text-light/35 focus:outline-none focus:border-primary transition-colors duration-300"
                     placeholder="Message subject"
                   />
                 </div>
@@ -169,7 +166,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full bg-dark/60 border border-primary/20 rounded-lg px-4 py-3 text-light focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
+                    className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-light placeholder:text-light/35 focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
                     placeholder="Write your message here..."
                   />
                 </div>
@@ -177,7 +174,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="btn-primary w-full bg-primary hover:bg-primary/90 text-white px-6 py-4 rounded-lg font-medium flex items-center justify-center gap-2 shadow-lg shadow-primary/30 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                  className="btn-primary w-full bg-primary hover:bg-primary/90 text-dark px-6 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                 >
                   {status === "sending" ? (
                     "Sending..."
@@ -197,7 +194,7 @@ const Contact = () => {
           <div className="animate-slide-up stagger-3">
             <div className="space-y-6">
               {/* Contact Details */}
-              <div className="bg-dark/40 backdrop-blur-sm border border-primary/20 rounded-2xl p-8">
+              <div className="bg-surface border border-white/10 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-light mb-6">
                   Contact Information
                 </h3>
@@ -223,7 +220,7 @@ const Contact = () => {
               </div>
 
               {/* Social Links */}
-              <div className="bg-dark/40 backdrop-blur-sm border border-primary/20 rounded-2xl p-8">
+              <div className="bg-surface border border-white/10 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-light mb-6">
                   Follow Me
                 </h3>
@@ -234,7 +231,7 @@ const Contact = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`bg-dark/60 border border-primary/20 p-4 rounded-lg text-light/70 ${social.color} transition-all duration-300 hover:scale-110 hover:border-primary/50`}
+                      className={`bg-dark border border-white/10 p-4 rounded-lg text-light/70 ${social.color} transition-all duration-300 hover:scale-105 hover:border-primary/50`}
                       aria-label={social.label}
                     >
                       {social.icon}
@@ -244,9 +241,9 @@ const Contact = () => {
               </div>
 
               {/* Availability */}
-              <div className="bg-gradient-to-br from-primary/20 to-cyan-500/20 border border-primary/30 rounded-2xl p-8 text-center">
-                <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full mb-4">
-                  <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+              <div className="bg-surface border border-primary/30 rounded-2xl p-8 text-center">
+                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
+                  <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                   Available for Work
                 </div>
                 <p className="text-light/80 leading-relaxed">
