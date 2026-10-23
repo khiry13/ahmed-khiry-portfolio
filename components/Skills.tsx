@@ -4,7 +4,7 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend",
-      color: "text-cyan-400",
+      color: "text-primary",
       skills: [
         { name: "React", level: 90 },
         { name: "Next.js", level: 85 },
@@ -16,7 +16,7 @@ const Skills = () => {
     },
     {
       title: "Backend",
-      color: "text-teal-400",
+      color: "text-primary",
       skills: [
         { name: "Node.js & Express", level: 85 },
         { name: "Python", level: 90 },
@@ -27,7 +27,7 @@ const Skills = () => {
     },
     {
       title: "Odoo ERP",
-      color: "text-purple-400",
+      color: "text-primary",
       skills: [
         { name: "Odoo 17/18/19", level: 90 },
         { name: "Custom Module Development", level: 90 },
@@ -38,7 +38,7 @@ const Skills = () => {
     },
     {
       title: "Tools & Others",
-      color: "text-amber-400",
+      color: "text-primary",
       skills: [
         { name: "Git & GitHub", level: 90 },
         { name: "Docker (Basics)", level: 60 },
@@ -50,13 +50,11 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 relative overflow-hidden">
-      <div className="blur-circle w-96 h-96 bg-purple-500 top-0 right-0" />
-
+    <section id="skills" className="py-24 relative overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Section Title */}
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-display font-bold gradient-text mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-normal text-light mb-4">
             Technical Skills
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
@@ -70,7 +68,7 @@ const Skills = () => {
           {skillCategories.map((category, catIndex) => (
             <div
               key={catIndex}
-              className={`bg-dark/40 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 animate-slide-up stagger-${catIndex + 2}`}
+              className={`card-hover bg-surface border border-white/10 rounded-2xl p-8 animate-slide-up stagger-${catIndex + 2}`}
             >
               <h3
                 className={`text-2xl font-bold ${category.color} mb-6 flex items-center gap-2`}
@@ -89,9 +87,9 @@ const Skills = () => {
                         {skill.level}%
                       </span> */}
                     </div>
-                    <div className="w-full bg-dark/60 rounded-full h-2 overflow-hidden">
+                    <div className="w-full bg-dark rounded-full h-2 overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-primary to-cyan-400 rounded-full transition-all duration-1000 ease-out"
+                        className="h-full bg-primary rounded-full transition-all duration-1000 ease-out"
                         style={{
                           width: `${skill.level}%`,
                           animation: "slideIn 1s ease-out forwards",
@@ -108,7 +106,7 @@ const Skills = () => {
 
         {/* Additional Info */}
         <div className="mt-12 text-center animate-fade-in stagger-6">
-          <div className="bg-dark/40 backdrop-blur-sm border border-primary/20 rounded-xl p-6 inline-block">
+          <div className="bg-surface border border-white/10 rounded-xl p-6 inline-block">
             <p className="text-light/70">
               🚀 Always learning and improving | 💡 Passionate about modern
               technologies

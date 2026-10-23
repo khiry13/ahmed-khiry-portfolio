@@ -8,9 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0EA5E9',
-        dark: '#0F172A',
-        light: '#F8FAFC',
+        primary: '#A3B18A',
+        dark: '#111713',
+        light: '#F2F1EA',
+        surface: '#1A211C',
+        'surface-raised': '#202923',
       },
       fontFamily: {
         display: ['var(--font-display)'],

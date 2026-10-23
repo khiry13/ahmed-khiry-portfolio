@@ -35,7 +35,7 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-dark/80 backdrop-blur-lg shadow-lg'
+          ? 'bg-dark/95 border-b border-white/10 shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -48,7 +48,7 @@ const Navigation = () => {
               e.preventDefault()
               scrollToSection('#home')
             }}
-            className="text-2xl font-display font-bold gradient-text cursor-pointer"
+            className="text-2xl font-display font-bold text-light cursor-pointer"
           >
             Ahmed
           </a>
@@ -63,7 +63,7 @@ const Navigation = () => {
                   e.preventDefault()
                   scrollToSection(item.href)
                 }}
-                className="text-light/80 hover:text-primary transition-colors duration-300 cursor-pointer"
+                className="text-light/70 hover:text-primary transition-colors duration-300 cursor-pointer"
               >
                 {item.label}
               </a>
@@ -82,7 +82,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4 animate-slide-up">
+          <div className="md:hidden mt-4 pb-4 space-y-4 animate-slide-up border-t border-white/10 pt-4">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -91,7 +91,7 @@ const Navigation = () => {
                   e.preventDefault()
                   scrollToSection(item.href)
                 }}
-                className="block text-light/80 hover:text-primary transition-colors duration-300 cursor-pointer"
+                className="block text-light/70 hover:text-primary transition-colors duration-300 cursor-pointer"
               >
                 {item.label}
               </a>

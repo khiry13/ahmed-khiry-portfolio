@@ -88,14 +88,11 @@ const Projects = () => {
     filter === "all" ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <section id="projects" className="py-24 relative overflow-hidden">
-      <div className="grid-background absolute inset-0 opacity-30" />
-      <div className="blur-circle w-96 h-96 bg-cyan-500 -bottom-48 left-1/2" />
-
+    <section id="projects" className="py-24 relative overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Section Title */}
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-display font-bold gradient-text mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-normal text-light mb-4">
             Projects
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
@@ -112,8 +109,8 @@ const Projects = () => {
               onClick={() => setFilter(cat.id)}
               className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
                 filter === cat.id
-                  ? "bg-primary text-white shadow-lg shadow-primary/30"
-                  : "bg-dark/40 text-light/70 border border-primary/20 hover:border-primary/50"
+                  ? "bg-primary text-dark"
+                  : "bg-surface text-light/70 border border-white/10 hover:border-primary/50"
               }`}
             >
               {cat.label}
@@ -126,13 +123,13 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className={`card-hover bg-dark/40 backdrop-blur-sm border border-primary/20 rounded-2xl overflow-hidden animate-slide-up stagger-${index + 3}`}
+              className={`card-hover bg-surface border border-white/10 rounded-2xl overflow-hidden animate-slide-up stagger-${index + 3}`}
             >
               {/* Project Image */}
-              <div className="relative h-64 bg-gradient-to-br from-primary/20 to-cyan-500/20 overflow-hidden group">
+              <div className="relative h-64 bg-surface-raised overflow-hidden group">
                 {!project.image || imageErrors[project.id] ? (
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-6xl font-display font-bold text-white/10">
+                    <div className="text-6xl font-display font-bold text-primary/40">
                       {project.title.charAt(0)}
                     </div>
                   </div>
@@ -150,17 +147,17 @@ const Projects = () => {
                   />
                 )}
                 {project.featured && (
-                  <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute top-4 right-4 bg-primary text-dark px-3 py-1 rounded-full text-sm font-semibold">
                     Featured
                   </div>
                 )}
-                <div className="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                <div className="absolute inset-0 bg-dark/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                   {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white text-dark p-3 rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
+                      className="bg-light text-dark p-3 rounded-full hover:bg-primary transition-colors duration-300"
                       aria-label="GitHub"
                     >
                       <Github size={20} />
@@ -171,7 +168,7 @@ const Projects = () => {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white text-dark p-3 rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
+                      className="bg-light text-dark p-3 rounded-full hover:bg-primary transition-colors duration-300"
                       aria-label="Live Demo"
                     >
                       <ExternalLink size={20} />
@@ -182,7 +179,7 @@ const Projects = () => {
 
               {/* Project Info */}
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-light mb-3">
+                <h3 className="text-2xl font-semibold text-light mb-3">
                   {project.title}
                 </h3>
                 <p className="text-light/70 mb-4 leading-relaxed">
