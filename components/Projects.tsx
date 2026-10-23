@@ -10,27 +10,6 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Student Management System - Odoo",
-      category: "odoo",
-      description:
-        "A custom Odoo module for managing students and training courses with attendance and grading systems",
-      image: "/projects/student-management.jpg", // Place the image in public/projects
-      tech: [
-        "Python",
-        "Odoo 17",
-        "PostgreSQL",
-        "XML",
-        "JavaScript",
-        "OWL",
-        "REST APIs",
-        "QWeb Reports",
-      ],
-      github: "https://github.com/khiry13/addons_sms",
-      demo: "#",
-      featured: true,
-    },
-    {
-      id: 2,
       title: "QuickDine – Multi-Restaurant Table Booking Platform",
       category: "fullstack",
       description:
@@ -49,27 +28,68 @@ const Projects = () => {
       ],
       github: "https://github.com/khiry13/QuickDine",
       demo: "https://quick-dine-xi-eight.vercel.app/",
-      featured: true,
+      featured: false,
+    },
+    {
+      id: 2,
+      title: "Shopsy – Responsive E-commerce Storefront",
+      category: "frontend",
+      description:
+        "A responsive e-commerce storefront featuring promotional hero slides, product showcases, top-rated product cards, and customer testimonials.",
+      image: "/images/shopsy.png",
+      tech: [
+        "React 19",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "React Slick",
+        "AOS",
+        "React Icons",
+      ],
+      github: "https://github.com/khiry13/shopsy",
+      demo: "https://shopsy-lake-one.vercel.app/",
+      featured: false,
     },
     {
       id: 3,
+      title: "Student Management System - Odoo",
+      category: "odoo",
+      description:
+        "A custom Odoo module for managing students and training courses with attendance and grading systems",
+      image: "/projects/student-management.jpg", // Place the image in public/projects
+      tech: [
+        "Python",
+        "Odoo 17",
+        "PostgreSQL",
+        "XML",
+        "JavaScript",
+        "OWL",
+        "REST APIs",
+        "QWeb Reports",
+      ],
+      github: "https://github.com/khiry13/addons_sms",
+      demo: "#",
+      featured: false,
+    },
+    {
+      id: 4,
       title: "Samtia B2B E-Commerce Platform - Odoo",
       category: "odoo",
       description:
         "A headless B2B e-commerce platform, enabling product catalog management, customer-specific pricing, RFQs, quotations, orders, product requests, client and portal-user management.",
       image: "/projects/visitor-tracking.jpg",
       tech: ["Python", "Odoo 19", "PostgreSQL", "REST APIs", "Next.js", "TypeScript", "WebSockets"],
-      github: "#",
+      github: "",
       demo: "#",
       featured: false,
     },
     {
-      id: 4,
+      id: 5,
       title: "Portfolio Website",
       category: "frontend",
       description:
         "A modern, interactive portfolio website built with Next.js and Tailwind CSS",
-      image: "/projects/portfolio.jpg",
+      image: "/images/portfolio.png",
       tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
       github: "https://github.com/khiry13/ahmed-khiry-portfolio",
       demo: "#",
